@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "dependencies": {
+    "@shower/shower": "^3.0.0"
+  },
+  "scripts": {
+    "archive": "shower archive --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
+    "pdf": "shower pdf",
+    "prepare": "shower prepare --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
+    "publish": "shower publish --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
+    "start": "shower serve",
+    "test": "npm run prepare && ls prepared && npm run archive && path-exists presentation.zip"
+  }
+}

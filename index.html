@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>PWA</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="shower/themes/ribbon/styles/styles.css" rel="stylesheet">
+  <link href="webmanifest.json" rel="manifest">
+  <link href="pictures/logo.svg" rel="shortcut icon" type="image/svg">
+  <link href="pictures/logo.png" rel="shortcut icon" type="image/png">
+
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="#585a5e" name="apple-mobile-web-app-status-bar-style">
+  <link href="pictures/logo.svg" rel="apple-touch-icon">
+  <link href="pictures/logo.png" rel="apple-touch-icon">
+  <link href="pictures/logo.svg" rel="apple-touch-startup-image">
+  <link href="pictures/logo.png" rel="apple-touch-startup-image">
+
+  <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
+
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+  </style>
+  <!--<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(function (reg) {
+
+        if (reg.installing) {
+          console.log('Service worker installing');
+        } else if (reg.waiting) {
+          console.log('Service worker installed');
+        } else if (reg.active) {
+          console.log('Service worker active');
+        }
+
+      }).catch(function (error) {
+        // registration failed
+        console.error('Registration failed with ' + error);
+      });
+    }
+  </script>-->
+</head>
+<body class="shower list">
+
+<header class="caption">
+  <h1>Клеим лучшее будущее с помощью PWA. Часть 1</h1>
+  <p><a href="https://github.com/jag-k/">Поздняков Олег</a></p>
+</header>
+
+<section class="slide clear">
+  <h2 style="text-align: center">Клеим лучшее будущее с помощью</h2>
+  <img alt="PWA Logo" class="cover" height="70%" src="pictures/Progressive_Web_Apps_Logo.svg" width="70%">
+</section>
+
+<section class="slide">
+  <h2>Обо мне</h2>
+  <div class="columns two">
+    <ol>
+      <li>Я — Поздняков Олег</li>
+      <li class="next">Занимаюсь разработкой 5 лет</li>
+      <li class="next">Участник <a href="https://vk.com/itlab58?w=wall-94462582_720">IT-Лаборатории'2018</a></li>
+      <li class="next">Победитель <a href="https://secon.ru/news/161">IT-Лаборатории'2020</a></li>
+      <li class="next">Разработчик сайтов <a href="https://secon.ru">SECON</a> и <a href="http://secothon.secon.ru">SECOTHON'2018</a>
+      </li>
+      <li class="next">Стажёр компании <a href="https://osinit.com">Open Solutions_</a></li>
+    </ol>
+    <img alt="avatar" class="top" src="pictures/avatar.jpeg" style="border-radius: 50%" width="100%">
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Поговорим о классических приложениях</h2>
+</section>
+
+<section class="slide">
+  <h2>Средний вес:</h2>
+  <p style="font-size: 50px"><b>33,5 МБ</b></p>
+  <img alt="Пухлый кот" class="cover place right h" src="pictures/fat-cat.jpg">
+</section>
+
+<section class="slide">
+  <h2>Разные платформы</h2>
+  <div class="columns three" style="align-items: center">
+    <img alt="Android" src="pictures/Android_logo_2019.svg" style="width: 100%">
+    <img alt="Apple" src="pictures/Apple_logo.svg" style="width: 100%">
+    <img alt="Microsoft Store" src="pictures/Microsoft_Store.svg" style="width: 100%">
+  </div>
+</section>
+
+<section class="slide">
+  <h2>PWA:</h2>
+  <ul>
+    <li>Это сайт</li>
+    <li>Устанавливается</li>
+    <li>Выглядит как нативное</li>
+    <li>Работает оффлайн</li>
+    <li>Присылает Push-уведомлениям</li>
+    <li>И другие Web API</li>
+  </ul>
+  <img alt="Гарольд доволен" class="place right bottom" src="pictures/garold.png">
+</section>
+
+<section class="slide">
+  <h2>Для бизнеса:</h2>
+  <div class="columns two">
+
+    <ul>
+      <li>Кроссплатформенность</li>
+      <li>Индексируется</li>
+      <li>Маленький вес (~2-5 МБ)</li>
+      <li>Установку предлагает браузер</li>
+      <li>Установка моментальная</li>
+    </ul>
+    <img alt="Гарольд доволен" src="pictures/scrooge-mcduck.png" width="100%">
+  </div>
+</section>
+
+<section class="slide clear">
+  <h2 class="black" style="color: #000; background: #fff; display: inline-block; padding: 13px">Технологии</h2>
+  <img alt="Гарольд доволен" class="cover h" src="pictures/stark.jpg">
+</section>
+
+
+<section class="slide">
+  <h2>Что под капотом?</h2>
+  <ul>
+    <li>Отзывчивый / адаптивный дизайн</li>
+    <li>Веб манифест</li>
+    <li>Автономный режим (Service Workers)</li>
+    <li>Веб API такие, как пуш-уведомления</li>
+  </ul>
+</section>
+
+<section class="slide clear">
+  <h2>Сервис-воркеры</h2>
+  <picture class="place bottom">
+    <source srcset="https://caniuse.bitsofco.de/image/serviceworkers.webp" type="image/webp">
+    <source srcset="https://caniuse.bitsofco.de/image/serviceworkers.png" type="image/png">
+    <img alt="Data on support for the serviceworkers feature across the major browsers from caniuse.com"
+         src="https://caniuse.bitsofco.de/image/serviceworkers.jpg">
+  </picture>
+</section>
+
+<section class="slide clear">
+  <h2>Push уведомления</h2>
+  <picture class="place bottom">
+    <source srcset="https://caniuse.bitsofco.de/image/push-api.webp" type="image/webp">
+    <source srcset="https://caniuse.bitsofco.de/image/push-api.png" type="image/png">
+    <img alt="Data on support for the push-api feature across the major browsers from caniuse.com"
+         src="https://caniuse.bitsofco.de/image/push-api.jpg">
+  </picture>
+</section>
+
+<section class="slide clear">
+  <h2>Оффлайн</h2>
+  <picture class="place bottom">
+    <source srcset="https://caniuse.bitsofco.de/image/offline-apps.webp" type="image/webp">
+    <source srcset="https://caniuse.bitsofco.de/image/offline-apps.png" type="image/png">
+    <img alt="Data on support for the offline-apps feature across the major browsers from caniuse.com"
+         src="https://caniuse.bitsofco.de/image/offline-apps.jpg">
+  </picture>
+</section>
+
+<section class="slide clear">
+  <h2>Веб Манифест</h2>
+  <picture class="place bottom">
+    <source srcset="https://caniuse.bitsofco.de/image/web-app-manifest.webp" type="image/webp">
+    <source srcset="https://caniuse.bitsofco.de/image/web-app-manifest.png" type="image/png">
+    <img alt="Data on support for the web-app-manifest feature across the major browsers from caniuse.com"
+         src="https://caniuse.bitsofco.de/image/web-app-manifest.jpg">
+  </picture>
+</section>
+
+<section class="slide">
+  <h2>Веб манифеста</h2>
+  <p><b>JSON-файл</b>, который влияет на то, как выглядит, воспринимается и ведёт себя приложение.</p>
+  <div class="flex">
+    <img alt="Chrome" class="browsers" src="pictures/Chrome.svg">
+    <img alt="Opera" class="browsers" src="pictures/Opera.svg">
+    <img alt="Yandex Browser" class="browsers" src="pictures/Yandex_Browser.svg">
+    <img alt="Samsung Internet" class="browsers" src="pictures/Samsung_Internet.svg">
+  </div>
+  <style>
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .browsers {
+      width: 100px;
+      height: 100px;
+    }
+
+  </style>
+</section>
+
+<section class="slide">
+  <h2>Пример веб манифеста</h2>
+  <pre>
+    <code>{</code>
+    <code>  <mark>"name"</mark>: "Прогрессивные Веб Приложения",</code>
+      <code>  "short_name": "PWA",</code>
+    <code>  <mark>"start_url"</mark>: "/",</code>
+      <code>  "display": "fullscreen",</code>
+    <code>  <mark>"icons"</mark>: [...]</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Для <b>Safari</b> есть набор метатегов</h2>
+  <pre>
+    <code>&lt;meta name="apple-mobile-web-app-capable"
+      content="<mark>yes</mark>"&gt;</code>
+    <code>&lt;meta name="apple-mobile-web-app-title"
+      content="<mark>PWA</mark>"&gt;</code>
+    <code>&lt;meta name="apple-mobile-web-app-status-bar-style"
+      content="<mark>black</mark>"&gt;</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <img alt="Installing PWA" class="cover h" src="pictures/install_pwa.gif">
+</section>
+
+<section class="slide">
+  <h2>В мобильных браузерах</h2>
+  <div class="columns three" style="align-items: flex-end">
+    <figure>
+      <img alt="Installing PWA" class="" src="pictures/chrome_pwa.png" width="75%">
+      <figcaption>Android Chrome</figcaption>
+    </figure>
+    <figure>
+      <img alt="Installing PWA" class="next" src="pictures/firefox_pwa_install.png" width="75%">
+      <figcaption>Android Firefox</figcaption>
+    </figure>
+    <figure>
+      <img alt="Installing PWA" class="next" src="pictures/ios_pwa.png" width="75%">
+      <figcaption>IOS Safari</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Web API</h2>
+  <div class="columns three">
+    <ul>
+      <li>WebStorage</li>
+      <li>Web workers</li>
+      <li>Video & Audio</li>
+      <li>Canvas</li>
+      <li>WebGL</li>
+      <li>Media Capture</li>
+      <li>Media Capture Stream</li>
+    </ul>
+
+    <ul>
+      <li>Web Speech</li>
+      <li>Geolocation</li>
+      <li>Motion sensores</li>
+      <li>Web sockets</li>
+      <li>Web Audio</li>
+      <li>Full Screen</li>
+      <li>Smart Lock</li>
+    </ul>
+
+    <ul>
+      <li>Battery Status</li>
+      <li>Ambient Light</li>
+      <li>Vibration API</li>
+      <li>Web bluetooth</li>
+      <li>Speech recognition</li>
+      <li>Payments</li>
+      <li>…</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide" id="shower">
+  <h2 class="shout">
+    <img alt="Shower logo" src="pictures/logo.svg">
+    <a href="https://github.com/shower/shower">Shower</a><br>
+    by <a href="https://pepelsbey.net">Vadim Makeev</a>
+  </h2>
+  <style>
+    #shower h2 {
+      font-size: 100px
+    }
+
+    #shower img {
+      width: 0.72em;
+      height: 0.72em;
+    }
+  </style>
+</section>
+
+<section class="slide">
+  <h2 class="shout">
+    Вопросы?
+  </h2>
+</section>
+
+<footer class="badge">
+  <a href="https://github.com/shower/shower">Скачать PDF версию</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="shower/shower.js"></script>
+<!-- Copyright © 2020 Jag_k -->
+
+</body>
+</html>
