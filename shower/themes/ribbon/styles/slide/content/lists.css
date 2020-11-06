@@ -52,21 +52,3 @@
 .slide ul > li[value]::before {
   content: attr(value);
 }
-
-/*
-.slide ul > li.glue::before,
-.slide ul.glue > li::before,
-*/
-.slide ul > li::before,
-.slide ul > li:lang(ru)::before {
-  content: '';
-  background-image: url("/pictures/glue.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 1em;
-  width: 1em;
-  transform: translate(calc(-100% - 0.5em), .5em);
-}
-
-

@@ -22,6 +22,18 @@
     .shower {
       --slide-ratio: calc(16 / 9);
     }
+
+    .slide ul > li::before,
+    .slide ul > li:lang(ru)::before {
+      content: '';
+      background-image: url("pictures/glue.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 1em;
+      width: 1em;
+      transform: translate(calc(-100% - 0.5em), .5em);
+    }
   </style>
   <!--<script>
     if ('serviceWorker' in navigator) {
