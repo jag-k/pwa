@@ -2,7 +2,7 @@
   "name": "Прогрессивные Веб Приложения",
   "short_name": "PWA",
   "lang": "ru",
-  "start_url": "../",
+  "start_url": "/pwa",
   "display": "fullscreen",
   "orientation": "landscape",
   "theme_color": "#4b86c2",
