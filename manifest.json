@@ -2,26 +2,26 @@
   "name": "Прогрессивные Веб Приложения",
   "short_name": "PWA",
   "lang": "ru",
-  "start_url": "/pwa",
+  "start_url": "./",
   "display": "fullscreen",
   "orientation": "landscape",
   "theme_color": "#4b86c2",
   "background_color": "#585a5e",
   "icons": [
     {
-      "src": "../pictures/logo.svg",
+      "src": "pictures/logo.svg",
       "sizes": "16x16 32x32 48x48 72x72 96x96 144x144 128x128 150x150 256x256 500x500",
       "type": "image/svg",
       "purpose": "any"
     },
     {
-      "src": "../pictures/logo.png",
+      "src": "pictures/logo.png",
       "sizes": "500x500",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "../pictures/logo_144.png",
+      "src": "pictures/logo_144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"

@@ -6,7 +6,6 @@ const urlsToCache = [
   "https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js",
   "https://caniuse.bitsofco.de/image/",
   "shower/",
-  "data/"
 ]
 
 self.addEventListener('install', function (event) {
