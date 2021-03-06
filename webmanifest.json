@@ -16,9 +16,15 @@
     },
     {
       "src": "pictures/logo.png",
-      "sizes": "144x144 500x500",
+      "sizes": "500x500",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "pictures/logo_144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

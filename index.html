@@ -34,25 +34,14 @@
       width: 1em;
       transform: translate(calc(-100% - 0.5em), .5em);
     }
-  </style>
-  <!--<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(function (reg) {
 
-        if (reg.installing) {
-          console.log('Service worker installing');
-        } else if (reg.waiting) {
-          console.log('Service worker installed');
-        } else if (reg.active) {
-          console.log('Service worker active');
-        }
-
-      }).catch(function (error) {
-        // registration failed
-        console.error('Registration failed with ' + error);
-      });
+    .slide ul.check-mark > li::before,
+    .slide ul.check-mark > li:lang(ru)::before {
+      background-image: url("pictures/check-mark.png");
+      opacity: 1;
     }
-  </script>-->
+
+  </style>
 </head>
 <body class="shower list">
 
@@ -76,7 +65,6 @@
       <li class="next">Победитель <a href="https://secon.ru/news/161">IT-Лаборатории'2020</a></li>
       <li class="next">Разработчик сайтов <a href="https://secon.ru">SECON</a> и <a href="http://secothon.secon.ru">SECOTHON'2018</a>
       </li>
-      <li class="next">Стажёр компании <a href="https://osinit.com">Open Solutions_</a></li>
     </ol>
     <img alt="avatar" class="top" src="pictures/avatar.jpeg" style="border-radius: 50%" width="100%">
   </div>
@@ -89,7 +77,7 @@
 <section class="slide">
   <h2>Средний вес:</h2>
   <p style="font-size: 50px"><b>33,5 МБ</b></p>
-  <img alt="Пухлый кот" class="cover place right h" src="pictures/fat-cat.jpg">
+  <img alt="Толстый кот" class="cover place right h" src="pictures/fat-cat.jpg">
 </section>
 
 <section class="slide">
@@ -103,7 +91,7 @@
 
 <section class="slide">
   <h2>PWA:</h2>
-  <ul>
+  <ul class="check-mark">
     <li>Это сайт</li>
     <li>Устанавливается</li>
     <li>Выглядит как нативное</li>
@@ -321,6 +309,27 @@
 <div class="progress"></div>
 
 <script src="shower/shower.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function (reg) {
+
+      if (reg.installing) {
+        console.log('Service worker installing');
+      } else if (reg.waiting) {
+        console.log('Service worker installed');
+      } else if (reg.active) {
+        console.log('Service worker active');
+      }
+
+    }).catch(function (error) {
+      // registration failed
+      console.error('Registration failed with ' + error);
+    });
+  } else {
+    console.warn("SW not support")
+  }
+</script>
 <!-- Copyright © 2020 Jag_k -->
 
 </body>
